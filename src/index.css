@@ -5,6 +5,10 @@ html {
   font-family: "Funnel Display", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 .time-count {
   font-family: "Archivo Black", sans-serif;
 }

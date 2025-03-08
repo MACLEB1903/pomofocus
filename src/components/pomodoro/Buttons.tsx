@@ -13,6 +13,8 @@ export default function Buttons() {
     breakLength,
     isPomodoroRunning,
     isBreakRunning,
+    setSessionLength,
+    setBreakLength,
     setIsPomodoroRunning,
     setIsBreakRunning,
     setPomodoroTimer,
@@ -22,20 +24,18 @@ export default function Buttons() {
   function buttonsActions(id: string) {
     //Run Pomodoro
     if (id === "countdown" && !isPomodoroRunning) {
-      console.log("pomodoro started");
+      setPomodoroTimer({ minutes: sessionLength, seconds: 0 });
       setIsPomodoroRunning(true);
       setSession("pomodoro");
     }
 
     //Setting Session length
     if (id === "session-label" && !isPomodoroRunning) {
-      console.log("seeting session length");
       setActiveButton(id);
     }
 
     //Setting Break Length
     if (id === "break-label" && !isPomodoroRunning) {
-      console.log("seeting break length");
       setActiveButton(id);
     }
 
@@ -43,12 +43,10 @@ export default function Buttons() {
     if (id === "stop-pomodoro-break") {
       setActiveButton("");
       if (isPomodoroRunning && session === "pomodoro") {
-        console.log("pomodoro paused");
         setIsPomodoroRunning(false);
         setActiveButton(id);
       }
       if (isBreakRunning && session === "break") {
-        console.log("break paused");
         setIsBreakRunning(false);
         setActiveButton(id);
       }
@@ -57,12 +55,10 @@ export default function Buttons() {
     //Continue Pomodoro / Continue Break
     if (id === "stop-pomodoro-break") {
       if (!isPomodoroRunning && session === "pomodoro") {
-        console.log("pomodoro continued");
         setIsPomodoroRunning(true);
       }
 
       if (!isBreakRunning && session === "break") {
-        console.log("break continued");
         setIsBreakRunning(true);
       }
     }
@@ -73,7 +69,7 @@ export default function Buttons() {
         setIsPomodoroRunning(false);
         setIsBreakRunning(true);
         setSession("break");
-        console.log("pomodoro skipped");
+
         setActiveButton("");
       }
 
@@ -81,7 +77,7 @@ export default function Buttons() {
         setIsPomodoroRunning(true);
         setIsBreakRunning(false);
         setSession("pomodoro");
-        console.log("break skipped");
+
         setActiveButton("");
       }
       setPomodoroTimer((prev) => ({
@@ -104,15 +100,18 @@ export default function Buttons() {
       setIsBreakRunning(false);
       setActiveButton("session-label");
 
+      setSessionLength(25);
+      setBreakLength(5);
+
       setPomodoroTimer((prev) => ({
         ...prev,
-        minutes: sessionLength,
+        minutes: 25,
         seconds: 0,
       }));
 
       setBreakTimer((prev) => ({
         ...prev,
-        minutes: breakLength,
+        minutes: 5,
         seconds: 0,
       }));
     }
