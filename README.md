@@ -2,6 +2,8 @@
 
 pomofocus is a Focus & Pomodoro timer that includes time breaks and theme modes for a customizable productivity experience, designed to help improve focus and concentration.
 
+Live at: https://pomofocus-jet.vercel.app/
+
 ## Preview
 
 ![pofocus preview]()
