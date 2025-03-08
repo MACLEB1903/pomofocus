@@ -26,7 +26,7 @@ export default function Pomofocus() {
     <section
       className={`flex flex-col p-[3rem] h-[100svh] w-[100vw] ${theme} transition-opacity ease-in duration-700 opacity-100`}
     >
-      <div className="time-wrapper flex-1 flex flex-col justify-center items-center mb-[15svh] lg:mb-[0]">
+      <div className="time-wrapper flex-1 flex flex-col justify-center items-center mb-[20svh] lg:mb-[0]">
         {!isTyping && (
           <button
             className="text-[clamp(3.5rem,5vw,6rem)] task text-center text-zinc-500 hover:cursor-pointer"

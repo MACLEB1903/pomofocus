@@ -1,4 +1,4 @@
-import React, { createContext, useState, ReactNode } from "react";
+import React, { createContext, useState, ReactNode, useEffect } from "react";
 
 export type ThemeType = "dark" | "light" | "dark-gradient" | "light-gradient";
 type ModeType = "focus" | "pomodoro";
@@ -51,6 +51,12 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const fillColor = themePresets[theme].fillColor;
   const buttonColor = themePresets[theme].buttonColor;
   const navBgColor = themePresets[theme].navBgColor;
+
+  useEffect(() => {
+    document.body.classList.remove("fade-in");
+    void document.body.offsetWidth;
+    document.body.classList.add("fade-in");
+  }, [theme]);
 
   return (
     <ThemeContext.Provider
