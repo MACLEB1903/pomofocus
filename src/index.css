@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Funnel+Display:wght@300..800&display=swap");
+@import "tailwindcss";
+
+html {
+  font-family: "Funnel Display", sans-serif;
+}
+
+.time-count {
+  font-family: "Archivo Black", sans-serif;
+}
+
+.buttons-wrapper button {
+  font-family: "Funnel Display", sans-serif;
+}
+.dark {
+  background: #131313;
+}
+
+.light {
+  background: #f0eee7;
+}
+
+.dark-gradient {
+  background: linear-gradient(
+    299deg,
+    #004d78,
+    #01142a,
+    #01143a,
+    #002343,
+    #372978,
+    #3ab8c3
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.light-gradient {
+  background: linear-gradient(
+    299deg,
+    #fcfefd,
+    #7ee0ff,
+    #74affe,
+    #e0d8f9,
+    #d290f1
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
