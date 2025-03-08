@@ -26,6 +26,7 @@ export default function Navigation() {
       style={{ background: navBgColor }}
     >
       <button
+        id="focus-btn"
         className="br-50% rounded-full hover:cursor-pointer"
         style={{
           background: mode === "focus" ? fillColor : "",
@@ -35,6 +36,7 @@ export default function Navigation() {
         <Rocket />
       </button>
       <button
+        id="pomodoro-btn"
         className=" br-50% rounded-full hover:cursor-pointer"
         onClick={() => setMode("pomodoro")}
         style={{
@@ -44,6 +46,7 @@ export default function Navigation() {
         <Clock />
       </button>
       <button
+        id="theme-change-btn"
         className=" br-50% rounded-full hover:cursor-pointer"
         onClick={() => {
           count++;
