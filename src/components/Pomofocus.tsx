@@ -24,7 +24,7 @@ export default function Pomofocus() {
 
   return (
     <section
-      className={`flex flex-col p-[3rem] h-[100svh] w-[100vw] ${theme} transition-opacity ease-in duration-700 opacity-100`}
+      className={` flex flex-col p-[3rem] h-[100svh] w-[100vw] ${theme} transition-opacity ease-in duration-700 opacity-100`}
     >
       <div className="time-wrapper flex-1 flex flex-col justify-center items-center mb-[20svh] lg:mb-[0]">
         {!isTyping && (
