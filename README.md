@@ -6,7 +6,7 @@ Live at: https://pomofocus-jet.vercel.app/
 
 ## Preview
 
-![pofocus preview]()
+![pofocus preview](https://raw.githubusercontent.com/MACLEB1903/pomofocus/refs/heads/main/src/assets/preview.png)
 
 ## Features
 
