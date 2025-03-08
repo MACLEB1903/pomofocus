@@ -158,13 +158,6 @@ export const TimerProvider = ({ children }: { children: ReactNode }) => {
     breakLength,
   ]);
 
-  useEffect(() => {
-    if (!isPomodoroRunning && !isBreakRunning) {
-      setPomodoroTimer({ minutes: sessionLength, seconds: 0 });
-      setBreakTimer({ minutes: breakLength, seconds: 0 });
-    }
-  }, [sessionLength, breakLength, isBreakRunning, isPomodoroRunning]);
-
   return (
     <TimerContext.Provider
       value={{

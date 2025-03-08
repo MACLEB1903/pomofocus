@@ -15,19 +15,19 @@ export default function Default() {
 
   console.log(buttonColor);
   function incrementTimer() {
-    if (activeButton === "session-length") {
+    if (activeButton === "session-label") {
       setSessionLength((prev) => prev + 1);
     }
-    if (activeButton === "break-length") {
+    if (activeButton === "break-label") {
       setBreakLength((prev) => prev + 1);
     }
   }
 
   function decrementTimer() {
-    if (activeButton === "session-length") {
+    if (activeButton === "session-label") {
       setSessionLength((prev) => Math.max(prev - 1, 1));
     }
-    if (activeButton === "break-length") {
+    if (activeButton === "break-label") {
       setBreakLength((prev) => Math.max(prev - 1, 1));
     }
   }
